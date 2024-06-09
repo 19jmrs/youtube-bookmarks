@@ -1,0 +1,38 @@
+package views
+
+templ Navbar() {
+	<div class="flex bg-gray-800 text-white top-0 py-3 flex-wrap justify-around bg-silver">
+        <h1 class="text-lg font-semibold">Todo app</h1>
+        <ul class="flex gap-[40px] text-m">
+          <li>Home</li>
+          <li>product</li>
+          <li>about</li>
+          <li>contact</li>
+        </ul>
+      </div>
+}
+
+templ Footer() {
+<footer class="text-center items-center p-4 bg-base-300 text-base-content">
+	<aside>
+		<p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+	</aside>
+</footer>
+}
+	
+
+templ Layout() {
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<link rel="stylesheet" href="/public/output.css"/>
+		</head>
+		<body>
+			@Navbar()
+			{children...}
+			@Footer()
+		</body>
+	</html>
+}
