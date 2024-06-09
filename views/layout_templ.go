@@ -23,7 +23,7 @@ func Navbar() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"flex bg-gray-800 text-white top-0 py-3 flex-wrap justify-around bg-silver\"><h1 class=\"text-lg font-semibold\">Todo app</h1><ul class=\"flex gap-[40px] text-m\"><li>Home</li><li>product</li><li>about</li><li>contact</li></ul></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"flex bg-gray-800 text-white top-0 py-3 flex-wrap justify-around bg-silver\"><h1 class=\"text-lg font-semibold\"><a href=\"/\">Youtube Bookmarks</a></h1><ul class=\"flex gap-[40px] text-m\"><li><a href=\"/\">Home</a></li><li>Dashboard</li><li><a href=\"/register\">Register</a></li><li><a href=\"/login\">Login</a></li></ul></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -71,7 +71,7 @@ func Layout() templ.Component {
 			templ_7745c5c3_Var3 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"stylesheet\" href=\"/public/output.css\"></head><body>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><script src=\"https://unpkg.com/htmx.org@1.9.12\"></script><link rel=\"stylesheet\" href=\"/public/output.css\"></head><body>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
