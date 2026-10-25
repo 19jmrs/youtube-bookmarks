@@ -25,7 +25,9 @@ func NewMongoUserStore(client *mongo.Client) *MongoUserStore{
 	}
 }
 
-func (s *MongoUserStore) CreateUser(ctx context.Context, user *types.User) (*types.User, error){
+func (s *MongoUserStore) CreateUser(user *types.User) (*types.User, error){
+	
+
 	res, err := s.coll.InsertOne(ctx, user)
 	if err!= nil{
 		return nil, err

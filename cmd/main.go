@@ -26,7 +26,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	userHandler := handlers.NewUserHandler(db.NewMongoUserStore(client))
+	//userHandler := handlers.NewUserHandler(db.NewMongoUserStore(client))
 	
 	r := chi.NewRouter()
 	r.Use(middleware.Logger)
@@ -35,7 +35,7 @@ func main() {
 	r.Handle("/public/*", http.StripPrefix("/public/", fileServer))
 
 	r.Get("/", templ.Handler(views.Landing()).ServeHTTP)
-	r.Post("/register", userHandler.HandleCreateUser)
+	r.Get("/register", templ.Handler(views.Register()).ServeHTTP)
 	
 
 	http.ListenAndServe(":8000", r)
